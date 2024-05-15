@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="#">
+    <link rel="stylesheet" href="/static/main.css">
 </head><body>
     <h1>Categoria</h1>
-    
+    <hr>
     <ul>
-        {% for catogory in categoria %}
-            <li>{{ category["name"] }}</li>
-        {% editor %}
+        {% for categoria in categorias %}
+            <li>{{ categoria["name"] }}</li>
+        {% endfor %}
     </ul>
     
 </body></html>
