@@ -1,19 +1,8 @@
-html { font-family: cursive; background: #eee; padding: 1rem; }
-body { max-width: 960px; margin: 0 auto; background: white; }
-h1 { font-family: Arial, Helvetica, sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: hwb(327 32% 28%); margin: 1rem 0; }
-a { color: hsl(0, 64%, 65%); }
-hr { border: none; border-top: 1px solid black; }
+html { font-family: Arial; background: #eeeeeee3; padding: 1rem; }
+body { max-width: 960px; margin: 0 auto; background: rgba(255, 255, 255, 0.815); }
+h1 { font-family:Georgia, 'Times New Roman', Times, serif; color: rgb(29, 109, 230); margin: 1rem 0; }
+hr { border: none; border-top: 1px solid rgba(0, 0, 0, 0.699); }
 nav h1 { flex: auto; margin: 0; }
-nav h1 a { text-decoration: none; padding: 0.25rem 0.5rem; }
-nav ul  { display: flex; list-style: none; margin: 0; padding: 0; }
 nav ul li { display: block; padding: 0.5rem; }
-.content { padding: 0 1rem 1rem; }
-.content > header { border-bottom: 1px solid lightgray; display: flex; align-items: flex-end; }
-.content > header h1 { flex: auto; margin: 1rem 0 0.25rem 0; }
-.post > header { display: flex; align-items: flex-end; font-size: 0.85em; }
-.post > header > div:first-of-type { flex: auto; }
-.post > header h1 { font-size: 1.5em; margin-bottom: 0; }
-.post .about { color: slategray; font-style: italic; }
-.post .body { white-space: pre-line; }
 input.danger { color: #cc2f2e; }
 input[type=submit] { align-self: start; min-width: 10em; }

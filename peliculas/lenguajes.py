@@ -1,7 +1,7 @@
 from . import db
 from flask import Blueprint, render_template
 
-bp = Blueprint('lenguaje', __name__,url_prefix="/lenguaje")
+bp = Blueprint('idioma', __name__,url_prefix="/idioma")
 
 @bp.route("/")
 def lenguaje():
@@ -16,3 +16,4 @@ def lenguaje():
                              lenguajes = lista_lenguaje)
 
     return pagina
+
