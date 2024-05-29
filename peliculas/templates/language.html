@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/static/main.css">
-</head><body>
-    <h1>Idioma</h1>
-    <hr>
-    <ul>
-        {% for lenguaje in lenguajes %}
-            <li>{{ lenguaje["name"] }}</li>
-        {% endfor %}
-    </ul>
-    
-</body></html>
+{% extends 'principal.html' %}
+{% block titulo %} Tipo de idiomas {% endblock %}
+{% block encabezado %} Idiomas: {% endblock %}
+{% block contenido %}
+<ul>
+    {% for lenguaje in lenguajes %}
+        <li>
+            <a href="{{ url_for('idioma.detalle', id=lenguaje['language_id']) }}">{{ lenguaje["name"] }}</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %} 

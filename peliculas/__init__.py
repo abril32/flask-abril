@@ -15,5 +15,5 @@ from . import lenguajes
 app.register_blueprint(lenguajes.bp)
 
 
-from . import categoria
-app.register_blueprint(categoria.bp)
+from . import genero
+app.register_blueprint(genero.bp)

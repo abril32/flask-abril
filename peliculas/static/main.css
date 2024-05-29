@@ -1,8 +1,0 @@
-html { font-family: Arial; background: #eeeeeee3; padding: 1rem; }
-body { max-width: 960px; margin: 0 auto; background: rgba(255, 255, 255, 0.815); }
-h1 { font-family:Georgia, 'Times New Roman', Times, serif; color: rgb(29, 109, 230); margin: 1rem 0; }
-hr { border: none; border-top: 1px solid rgba(0, 0, 0, 0.699); }
-nav h1 { flex: auto; margin: 0; }
-nav ul li { display: block; padding: 0.5rem; }
-input.danger { color: #cc2f2e; }
-input[type=submit] { align-self: start; min-width: 10em; }

@@ -1,0 +1,28 @@
+body {  }
+nav h1 { flex: auto; margin: 0; }
+nav ul li { display: block; padding: 0.5rem; }
+input.danger { color: #cc2f2e; }
+input[type=submit] { align-self: start; min-width: 10em; }
+.titulo{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: rgb(46, 46, 46); 
+    margin: 1rem 0;
+}
+
+.info{
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.699);
+}
+
+.caja{
+    font-family: Arial; 
+    background: hsl(54, 69%, 73%);
+    padding: 1rem; 
+}
+
+.caja2{
+    max-width: 960px; 
+    margin: 0 auto; 
+    background: #e9dca1d0;
+}

@@ -1,0 +1,12 @@
+{% extends 'principal.html' %}
+{% block titulo %} Lista de generos {% endblock %}
+{% block encabezado %} Generos: {% endblock %}
+{% block contenido %}
+<ul>
+    {% for categoria in categorias %}
+        <li>
+            <a href="{{ url_for('genero.detalle', id=categoria['category_id']) }}">{{ categoria["name"] }}</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %} 
