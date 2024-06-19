@@ -1,7 +1,7 @@
 from . import db
 from flask import Blueprint, render_template
 
-bp = Blueprint('peliculas', __name__,url_prefix="/peliculas")
+bp = Blueprint('peli', __name__,url_prefix="/peli")
 
 @bp.route("/")
 def peli():
@@ -20,20 +20,19 @@ def peli():
 @bp.route('/<int:id>/detalle')
 def detalle(id):
     consulta="""
-        SELECT title FROM film
+        SELECT title,description,length,rating,release_year FROM film
         WHERE film_id = ?
     """
     consulta2 = """
-        SELECT  FROM 
-        JOIN  on  = 
-        JOIN  on  = 
-        WHERE = ?
+        SELECT first_name,last_name, a.actor_id FROM film_actor fa
+        JOIN actor a on fa.actor_id = a.actor_id
+        WHERE film_id = ?
     """
     con = db.get_db()
     res = con.execute(consulta,(id,))
-    peliculas = res.fetchone()
+    pelicula = res.fetchone()
     res = con.execute(consulta2,(id,))
-    lista_peliculas = res.fetchall()
-    pagina = render_template("peli-detalle.html", peliculas=lista_peliculas, pelicula=peliculas)
+    lista_actores = res.fetchall()
+    pagina = render_template("peli-detalle.html", actores=lista_actores, pelicula=pelicula)
     
     return pagina

@@ -1,10 +1,11 @@
 {% extends 'principal.html' %}
 {% block titulo %} Peliculas {% endblock %}
+{% block encabezado %} Peliculas {% endblock %}
 {% block contenido %}
 <ul>
-    {% for lenguaje in lenguajes %}
+    {% for peli in pelis %}
         <li>
-            <a href="{{ url_for('lenguaje.detalle', id=lenguaje['language_id']) }}">{{ lenguaje["name"] }}</a>
+            <a href="{{ url_for('peli.detalle', id=peli['film_id']) }}">{{ peli["title"] }}</a>
         </li>
     {% endfor %}
 </ul>
