@@ -5,12 +5,12 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
-        <h1>{% block encabezado%} Genero: {{ categoria["name"] }} {% endblock %}</h1>
-        <h2>Peliculas</h2> 
+        <h1>{% block encabezado%} Actores {{ actor["first_name"]["last_name"] }} {% endblock %}</h1>
+        <h2>Peliculas</h2>
         <ul>
             {% block contenido%} 
-            {% for peli in peliculas %}
-                <li>{{ peli["pelicula"] }}</li>
+            {% for p in pelis %}
+                <li>{{ p["pelicula"] }}</li>
             {% endfor %}
             {% endblock %}
         </ul>

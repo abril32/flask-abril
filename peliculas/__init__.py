@@ -17,3 +17,10 @@ app.register_blueprint(lenguajes.bp)
 
 from . import genero
 app.register_blueprint(genero.bp)
+
+from . import actor
+app.register_blueprint(actor.bp)
+
+from . import peli
+app.register_blueprint(peli.bp)
+
