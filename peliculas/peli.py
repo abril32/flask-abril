@@ -20,7 +20,8 @@ def peli():
 @bp.route('/<int:id>/detalle')
 def detalle(id):
     consulta="""
-        SELECT title,description,length,rating,release_year FROM film
+        SELECT title,description,length,rating,release_year,l.name as lenguaje,l.language_id FROM film f
+        JOIN language l on f.language_id = l.language_id
         WHERE film_id = ?
     """
     consulta2 = """

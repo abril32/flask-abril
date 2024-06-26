@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>{% block titulo%} {% endblock %}</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-    </head>
-    <body>
-        <h1>{% block encabezado%} Idioma: {{ idioma["name"] }} {% endblock %}</h1>
-        <h2>Peliculas</h2>
-        <h2></h2> 
-        <ul>
-            {% block contenido%} 
-            {% for p in peliculas %}
-                <li>{{ p["titulo"] }}</li>
-            {% endfor %}
-            {% endblock %}
-        </ul>
-    </body>
-</html>
+{% extends 'principal.html' %}
+{% block titulo%} {% endblock %}</title>
+{% block encabezado%} Idioma: {{ idioma["name"] }} {% endblock %}
+{% block contenido%} 
+<h2>Peliculas</h2>
+<ul>
+    {% for p in peliculas %}
+        <li><a href="{{ url_for('peli.detalle', id=p['film_id']) }}">{{ p['titulo'] }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

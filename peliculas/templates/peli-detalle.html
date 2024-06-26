@@ -2,11 +2,15 @@
 {% block titulo %} {{pelicula["title"]}} {% endblock %}
 {% block encabezado %} {{pelicula["title"]}} {% endblock %}
 {% block contenido %}
-        <p>descipcion: {{pelicula["description"]}}</p> 
+        <p>Descipcion: {{pelicula["description"]}}</p> 
+        <p>Duracion: {{pelicula["length"]}} minutos</p>
+        <p>Clasificacion: {{pelicula["rating"]}}</p>
+        <p>Idioma:  <a href="{{ url_for('lenguaje.detalle', id=pelicula['language_id']) }}">{{pelicula["lenguaje"]}}</a></p>
         <h2>Actores</h2>
         <ul>
             {% for act in actores %}
-                <li>{{ act["first_name"]}} {{act["last_name"]}}  </li>
+                <li><a href="{{ url_for('actor.detalle', id=act['actor_id']) }}">{{ act["first_name"]}} {{act["last_name"]}}  </a></li>
             {% endfor %}
         </ul>
-        {% endblock %}
+{% endblock %}
+

@@ -14,7 +14,6 @@ def hello():
 from . import lenguajes
 app.register_blueprint(lenguajes.bp)
 
-
 from . import genero
 app.register_blueprint(genero.bp)
 
